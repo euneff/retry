@@ -43,7 +43,7 @@ const Login = (props) => {
     return (
         <div className='mt-3'>
             <h2 style={{textAlign:'center'}}>Login  to continue to NoteZ</h2> {/* 가운데 정렬 */}
-            <form  onSubmit={handleSubmit}>
+            <form  onSubmit={handleSubmit} style={{border:'1px solid #e1e3e5',borderRadius:'12px', width:'600px', backgrounColor:'#fff',padding: '20px', margin:'50px 350px' }}>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
                     <input 
@@ -55,11 +55,8 @@ const Login = (props) => {
                     name="email" 
                     aria-describedby="emailHelp"
                     placeholder="이메일 입력" /> 
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                    
-                    
+                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>    
                 </div>
-
 
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
