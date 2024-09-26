@@ -13,9 +13,9 @@ const Navbar = () => {
   return (
 
 
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#FAD8F8' , fontWeight: 'bold'}}> 
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/">NoteZ</Link>
+    <Link className="navbar-brand" to="/" >NoteZ</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -27,11 +27,14 @@ const Navbar = () => {
         <li className="nav-item">
           <Link className={`nav-link ${location.pathname==="/about"? "active" :""}`} to="/about">About</Link>
         </li>
+        <li className="nav-item">
+          <Link className={`nav-link ${location.pathname==="/about"? "active" :""}`} to="/about">순두부찌개</Link> 
+        </li> 
       </ul>
       {!localStorage.getItem('token')?
       <form className="d-flex">
-      <Link to="/login" className="btn btn-primary mx-1" role="button">Login</Link>
-      <Link to="/signup" className="btn btn-primary mx-1" role="button">Signup</Link>
+      <Link to="/login" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Login</Link>
+      <Link to="/signup" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Signup</Link>
       </form> : <button onClick={handleLogout} className="btn btn-primary">Logout</button>     }
     </div>
   </div>
