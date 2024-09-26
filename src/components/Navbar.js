@@ -13,8 +13,8 @@ const Navbar = () => {
   return (
 
 
-<nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#FAD8F8' , fontWeight: 'bold'}}> 
-  <div className="container-fluid">
+<nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#FAD8F8' , fontWeight: 'bold'}}> {/* 배경색 바꿈, 폰트 굵기 추가 */}
+  <div className="container-fluid"> 
     <Link className="navbar-brand" to="/" >NoteZ</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -28,13 +28,13 @@ const Navbar = () => {
           <Link className={`nav-link ${location.pathname==="/about"? "active" :""}`} to="/about">About</Link>
         </li>
         <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/about"? "active" :""}`} to="/about">순두부찌개</Link> 
+          <Link className={`nav-link ${location.pathname==="/about"? "active" :""}`} to="/about">순두부찌개</Link> {/* 한번 넣어봄 */}
         </li> 
       </ul>
       {!localStorage.getItem('token')?
       <form className="d-flex">
-      <Link to="/login" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Login</Link>
-      <Link to="/signup" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Signup</Link>
+      <Link to="/login" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Login</Link> {/* 배경색,글씨색 바꿈 */}
+      <Link to="/signup" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Signup</Link> {/* 배경색,글씨색 바꿈 */}
       </form> : <button onClick={handleLogout} className="btn btn-primary">Logout</button>     }
     </div>
   </div>

@@ -42,11 +42,11 @@ const Login = (props) => {
 
     return (
         <div className='mt-3'>
-            <h2 style={{textAlign:'center'}}>Login  to continue to NoteZ</h2> 
+            <h2 style={{textAlign:'center'}}>Login  to continue to NoteZ</h2> {/* 가운데 정렬 */}
             <form  onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
-                    <div>
+                    <div> {/* 아직 완성못함 */}
                     <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" /> 
                     <label for="email" className="form-text" id="email_label" aria-hidden="true">이메일 입력</label>
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
@@ -60,7 +60,7 @@ const Login = (props) => {
                 <button type="submit" className="btn btn-primary" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Submit</button>
             </form>
         </div>
-    )
+    ) 
 }
 
 export default Login
