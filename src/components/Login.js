@@ -46,15 +46,31 @@ const Login = (props) => {
             <form  onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
-                    <div> {/* 아직 완성못함 */}
-                    <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" /> 
-                    <label for="email" className="form-text" id="email_label" aria-hidden="true">이메일 입력</label>
+                    <input 
+                    type="email" 
+                    className="form-control" 
+                    value={credentials.email} 
+                    onChange={onChange} 
+                    id="email" 
+                    name="email" 
+                    aria-describedby="emailHelp"
+                    placeholder="이메일 입력" /> 
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                    </div> 
+                    
+                    
                 </div>
+
+
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" className="form-control" value={credentials.password} onChange={onChange} name="password" id="password" />
+                    <input 
+                    type="password" 
+                    className="form-control" 
+                    value={credentials.password} 
+                    onChange={onChange} 
+                    name="password" 
+                    id="password"
+                    placeholder="비밀번호 입력" />
                 </div>
 
                 <button type="submit" className="btn btn-primary" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Submit</button>
