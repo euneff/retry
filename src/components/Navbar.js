@@ -27,8 +27,8 @@ const Navbar = () => {
         <li className="nav-item">
           <Link className={`nav-link ${location.pathname==="/about"? "active" :""}`} to="/about">About</Link>
         </li>
-        <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/about"? "active" :""}`} to="/about">순두부찌개</Link> {/* 한번 넣어봄 */}
+        <li className="nav-item" style={{justifyContent:'center', alignItems:'center'}}>
+          <Link className={`nav-link ${location.pathname==="/about"? "active" :""}` } to="/Food">Food</Link> {/* 한번 넣어봄 */}
         </li> 
       </ul>
       {!localStorage.getItem('token')?
