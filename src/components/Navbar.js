@@ -1,12 +1,12 @@
 import React  from 'react'
 import { Link, useLocation} from "react-router-dom";
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useNavigate } from 'react-router-dom' // useHistory에서 useNavigate로 바꿈.
 
 const Navbar = () => {
-  let history=useHistory();
+  let navigate = useNavigate(); // useHistory에서 useNavigate로 바꿈.
   const handleLogout=()=>{
     localStorage.removeItem('token');
-    history.push("/login");
+    navigate("/login"); //navigate로 바꿈
   }
 
     let location = useLocation();

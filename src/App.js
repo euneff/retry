@@ -2,7 +2,7 @@ import './App.css';
 import React  from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
 } from "react-router-dom";
 import Navbar from './components/Navbar';
@@ -34,23 +34,13 @@ function App() {
       <Navbar/>
       <Alert alert={alert}/>
       <div className="container">
-      <Switch>
-          <Route exact path="/">
-            <Home showAlert={showAlert}  />
-          </Route>
-          <Route exact path="/about">
-          <About/>
-          </Route>
-          <Route exact path="/Food">
-          <Food/>
-          </Route>
-          <Route exact path="/login">
-          <Login showAlert={showAlert}    />
-          </Route>
-          <Route exact path="/signup">
-          <Signup showAlert={showAlert}  />
-          </Route>
-          </Switch>
+      <Routes>
+          <Route path="/" element={<Home showAlert={showAlert} />}/> 
+          <Route path="/about" element={<About/>} />
+          <Route path="/Food" elemnet={<Food/>}/>
+          <Route path="/login" element={<Login showAlert={showAlert}    />}/>
+          <Route path="/signup" element={<Signup showAlert={showAlert}  />}/>
+          </Routes>
           </div>
     </Router>
     </NoteState>

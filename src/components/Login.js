@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Login = (props) => {
@@ -8,9 +8,7 @@ const Login = (props) => {
      sectCredential : 함수를 사용하여 상태를 업데이트
      초기값은 폼이 비어있는 상태 */
 
-    let history = useHistory();
-    /* userHistory는 페이지 이동을 관리.
-       로그인에 성공하면 history.push("/")를 사용하여 홈 페이지(/)로 리다이렉트*/
+     let navigate = useNavigate(); //navigate로 바꿈
 
     const handleSubmit = async (e) => { // 서버에 로그인 요청을 보내는 역할
         e.preventDefault();
@@ -26,7 +24,7 @@ const Login = (props) => {
         if (json.success){
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken); 
-            history.push("/");
+            navigate("/"); // navigate로 수정
             props.showAlert("Logged in successfully", "success")
 
         }

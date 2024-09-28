@@ -3,19 +3,19 @@ import noteContext from "../components/context/notes/noteContext"
 import Noteitem from "./Noteitem"
 import Addnote from './Addnote'
 import { useRef } from 'react'
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+import { useNavigate} from 'react-router-dom' //useNavigate로 바꿈
 
 
     const Notes = () => {
         const context=useContext(noteContext);
         const {notes, getNotes, editNote}=context;
-        let history=useHistory();
+        const navigate = useNavigate(); // navigate로 바꿈
         useEffect(()=>{
             if(localStorage.getItem('token')){
                 getNotes()
             }
             else{
-                history.push("/login");
+                navigate("/login");
             }
             //eslint-disable-next-line
         }, [])
