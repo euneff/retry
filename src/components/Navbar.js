@@ -13,9 +13,9 @@ const Navbar = () => {
   return (
 
 
-<nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#FAD8F8' , fontWeight: 'bold'}}> {/* 배경색 바꿈, 폰트 굵기 추가 */}
+<nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#C7E0FA' , fontWeight: 'bold'}}> {/* 배경색 바꿈, 폰트 굵기 추가 */}
   <div className="container-fluid"> 
-    <Link className="navbar-brand" to="/" >NoteZ</Link>
+    <Link className="navbar-brand" to="/" style={{color:'#000000'}}>NoteZ</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -33,8 +33,8 @@ const Navbar = () => {
       </ul>
       {!localStorage.getItem('token')?
       <form className="d-flex">
-      <Link to="/login" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Login</Link> {/* 배경색,글씨색 바꿈 */}
-      <Link to="/signup" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Signup</Link> {/* 배경색,글씨색 바꿈 */}
+      <Link to="/login" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#70B6EC',color:'#000000'}}>Login</Link> {/* 배경색,글씨색 바꿈 */}
+      <Link to="/signup" className="btn btn-primary mx-1" role="button" style={{backgroundColor:'#70B6EC',color:'#000000'}}>Signup</Link> {/* 배경색,글씨색 바꿈 */}
       </form> : <button onClick={handleLogout} className="btn btn-primary">Logout</button>     }
     </div>
   </div>

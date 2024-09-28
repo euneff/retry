@@ -70,7 +70,7 @@ const Login = (props) => {
                     placeholder="비밀번호 입력" />
                 </div>
 
-                <button type="submit" className="btn btn-primary" style={{backgroundColor:'#CBC9F8',color:'#000000'}}>Submit</button>
+                <button type="submit" className="btn btn-primary" style={{backgroundColor:'#70B6EC',color:'#000000'}}>Submit</button>
             </form>
         </div>
     ) 
